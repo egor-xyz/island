@@ -7,9 +7,11 @@ Three.js (r170, loaded from unpkg through an import map). No build step.
 
 ## Demo
 
-[![Atoll Jelly demo](demo.png)](demo.mp4)
+**Play it live: https://egor-xyz.github.io/island/**
 
-Click the picture to watch the 24-second demo (`demo.mp4`).
+[![Atoll Jelly demo](demo.gif)](https://egor-xyz.github.io/island/demo.mp4)
+
+Click the GIF to watch the full 24-second video.
 
 ## Run
 
