@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atoll Jelly — Material Studies</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400;1,500&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="scene" tabindex="0" aria-label="Atoll Jelly 3D lagoon"></canvas>
+
+    <header class="intro">
+      <p class="eyebrow">Material Studies</p>
+      <h1 class="title">Atoll<br />Jelly.</h1>
+      <div class="rule"></div>
+      <p class="lede">
+        Six bungalows on stilts, a seaplane that comes and goes, and eagle rays
+        gliding through the jelly below.
+      </p>
+    </header>
+
+    <section class="howto">
+      <p class="eyebrow">How to play</p>
+      <h2 class="howto-line">Stir the lagoon. Feed the fish. Wave the seaplane off.</h2>
+      <p class="howto-text">
+        Drag across the water to make waves and the fish dart away · drag the side of
+        the block to tip it and slosh the lagoon · feed the fish and the school and the
+        rays come in · send the seaplane off from its pontoon, or call it in early ·
+        pick up a ring and throw it · drag a palm to bend it · drag empty space or
+        right-drag to orbit · scroll or pinch to zoom
+      </p>
+    </section>
+
+    <div class="status"><span class="dot"></span><span id="status-text">WEBGL · LIVE</span></div>
+
+    <aside class="panel" aria-label="Controls">
+      <div class="sec">
+        <p class="sec-title">The Lagoon</p>
+        <div class="btn-row">
+          <button class="btn dark" id="btn-plane" type="button">Seaplane</button>
+          <button class="btn dark" id="btn-feed" type="button">Feed the fish</button>
+          <button class="btn dark" id="btn-ring" type="button">Float ring</button>
+        </div>
+        <div class="progress"><div class="progress-fill" id="progress"></div></div>
+        <div class="counters">
+          <span>Landings <b id="c-landings">0</b></span>
+          <span>Fed <b id="c-fed">0</b></span>
+          <span>Afloat <b id="c-afloat">2</b></span>
+        </div>
+      </div>
+
+      <div class="sec">
+        <p class="sec-title">Flavour</p>
+        <div class="tiles">
+          <button class="tile selected" type="button" data-flavour="turquoise">
+            <span class="swatch turquoise"></span>Turquoise
+          </button>
+          <button class="tile" type="button" data-flavour="sapphire">
+            <span class="swatch sapphire"></span>Sapphire
+          </button>
+          <button class="tile" type="button" data-flavour="lime">
+            <span class="swatch lime"></span>Lime
+          </button>
+        </div>
+      </div>
+
+      <div class="sec sliders">
+        <label class="slider">
+          <span class="slider-head"><span>Firmness</span><span class="val" id="v-firmness">50</span></span>
+          <input type="range" id="s-firmness" min="0" max="100" value="50" />
+        </label>
+        <label class="slider">
+          <span class="slider-head"><span>Wave damping</span><span class="val" id="v-damping">30</span></span>
+          <input type="range" id="s-damping" min="0" max="100" value="30" />
+        </label>
+        <label class="slider">
+          <span class="slider-head"><span>Tide</span><span class="val" id="v-tide">0 cm</span></span>
+          <input type="range" id="s-tide" min="-30" max="30" value="0" />
+        </label>
+      </div>
+
+      <div class="sec foot">
+        <button class="btn light" id="btn-reset" type="button">Reset</button>
+        <button class="btn light" id="btn-pause" type="button">Pause</button>
+        <button class="btn light" id="btn-view" type="button">Reset view</button>
+      </div>
+    </aside>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
